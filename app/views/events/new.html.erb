@@ -1,3 +1,40 @@
-<h1>新しい予定</h1>
-<%= render 'form', event: @event %>
-<%= link_to '一覧へ戻る', events_path %>
+<%= form_with(model: @event, local: true) do |form| %>
+    <% if @event.errors.any? %>
+      <div id="error_explanation">
+        <ul>
+          <% @event.errors.full_messages.each do |message| %>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  
+    <div class="field">
+      <%= form.label :"タイトル" %>
+      <%= form.text_field :title %>
+    </div>
+  
+    <div class="field">
+      <%= form.label :"説明" %>
+      <%= form.text_area :description %>
+    </div>
+  
+    <div class="field">
+      <%= form.label :"開始時刻" %>
+      <%= form.datetime_select :start_time %>
+    </div>
+  
+    <div class="field">
+      <%= form.label :"終了時刻" %>
+      <%= form.datetime_select :end_time %>
+    </div>
+  
+    <div class="field">
+      <%= form.label :"終日" %>
+      <%= form.check_box :all_day %>
+    </div>
+  
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  <% end %>
+  

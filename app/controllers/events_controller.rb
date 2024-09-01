@@ -23,7 +23,7 @@ class EventsController < ApplicationController
       flash[:notice] = 'スケジュールが正常に作成されました。'
       redirect_to @event
     else
-      flash[:alert] = 'スケジュールの作成に失敗しました。'
+      flash.now[:alert] = @event.errors.full_messages.join(", ")
       render :new
     end
   end
@@ -54,7 +54,7 @@ class EventsController < ApplicationController
   end
 
   def event_params
-    params.require(:event).permit(:title, :start_time, :end_time, :all_day, :memo)
+    params.require(:event).permit(:title, :description, :start_time, :end_time, :all_day, :memo)
   end
 end
 
