@@ -1,0 +1,45 @@
+/* app/assets/stylesheets/new.css */
+form {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  input[type="form"] {
+    padding: 10px;
+    width: 50%;
+  }
+
+  input[type="text"] {
+    border: 2px solid #ccc;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+  }
+
+
+  /* フォーム全体のスタイル */
+.form-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* フォーム内のラベル */
+  .form-container label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+  }
+  

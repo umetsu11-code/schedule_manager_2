@@ -2,7 +2,7 @@ ja:
   activerecord:
    models:
     title: タイトル
-    Description: 説明
+    description: 説明
     user: ユーザー
   attributes:
     user:
@@ -10,7 +10,7 @@ ja:
     email: メールアドレス
     age: 年齢
     introduction: 一言紹介
-    Description: 説明
+    description: 説明
     title: タイトル
   errors:
     messages:
