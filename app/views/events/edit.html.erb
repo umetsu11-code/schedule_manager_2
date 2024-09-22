@@ -17,9 +17,12 @@
   </div>
 
   <div class="form-group">
-    <%= f.label :all_day, "終日の場合はチェックを入れます" %>
-    <%= f.check_box :all_day, class: 'form-control' %>
+  <%= f.label :all_day, "終日の場合はチェックを入れてください" %>
+  <div class="form-check">
+    <%= f.check_box :all_day, class: 'form-check-input' %>
+    <%= f.label :all_day, class: 'form-check-label' %>
   </div>
+</div>
 
   <div class="form-group">
     <%= f.label :memo, "スケジュールメモ" %>
