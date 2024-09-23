@@ -5,7 +5,6 @@ class Event < ApplicationRecord
   validates :end_time, presence:  { message: "終了時間を入力してください" }
   validate :end_time_after_start_time
   validates :memo, length: { maximum: 500 }
-  validates :all_day, inclusion: { in: [true, false], message: "全日を正しく選択してください" }
   
 
   def end_time_after_start_time
